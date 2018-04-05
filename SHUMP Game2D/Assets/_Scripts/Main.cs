@@ -113,7 +113,7 @@ public class Main : MonoBehaviour {
 
 	void Start () {
 		
-		S.level = 1;	
+		Main.S.level = 1;	
 		Utils.increaser = 0;
 		Utils.SetCameraBounds();
 		Enemy.DESTROY_COUNT = 0;

@@ -94,6 +94,9 @@ public class PowerUp : MonoBehaviour {
 		//letter.color = def.color; // We could colorize the letter too 
 		letter.text = def.letter; // Set the letter that is shown
 		type = wt; // Finally actually set the type
+		if (type == WeaponType.spread) {
+			letter.text = "S";
+		}
 	}
 
 	public void AbsorbedBy( GameObject target ) {

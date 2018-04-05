@@ -402,10 +402,6 @@ MonoBehaviour:
     type: 2}
   weapons:
   - {fileID: 1398663656}
-  - {fileID: 1398663656}
-  - {fileID: 1398663656}
-  - {fileID: 1398663656}
-  - {fileID: 1398663656}
   projectileSpeed: 40
   speed: 30
   rollMult: -45

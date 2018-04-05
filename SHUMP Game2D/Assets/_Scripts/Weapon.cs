@@ -177,6 +177,7 @@ public class Weapon : MonoBehaviour {
 			Main.S.invokeOnce ();
 				lastShotTime = Time.time;
 			}
+			Hero.S.hasPause = false;
 			Hero.S.setPauseText ();
 		}
 			

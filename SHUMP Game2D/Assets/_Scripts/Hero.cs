@@ -34,7 +34,7 @@ public class Hero : MonoBehaviour {
 		setHighText ();
 	}
 	public void setPauseText(){
-		if (hasPause) {
+		if (Hero.S.hasPause) {
 			pauser.text = "Pause Ready";
 		} else {
 			pauser.text = "Pause Not Ready";
@@ -55,11 +55,14 @@ public class Hero : MonoBehaviour {
 	}
 		
 	public void setNukeText(){
+		
 		nukeText.text = "Nuke: " + nukeAvailability;
 	}
 
 	// Use this for initialization
+
 	void Start () {
+		Main.S.level = 1;	
 		
 		setCurrentText();
 
@@ -67,6 +70,7 @@ public class Hero : MonoBehaviour {
 
 		setLevelText();
 
+		nukeAvailability = "Not Ready";
 		setNukeText ();
 
 

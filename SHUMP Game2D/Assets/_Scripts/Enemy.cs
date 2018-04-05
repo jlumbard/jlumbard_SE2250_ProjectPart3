@@ -36,7 +36,8 @@ public class Enemy : MonoBehaviour {
 	}
 
 	void Awake() {
-		bndCheck = GetComponent<BoundsCheck> ();
+		bndCheck = GetComponent<BoundsCheck>();
+
 
 	}
 
@@ -50,13 +51,17 @@ public class Enemy : MonoBehaviour {
 
 	void Update() {
 		Move ();
+		destroyIfOff ();
 
-		if (bndCheck != null && !bndCheck.isOnScreen) {
-				
-				Destroy (gameObject);
-		}
+
 			
 	}
+public void destroyIfOff(){
+	if (bndCheck != null && bndCheck.offDown) {
+		print ("destroying enemy");
+		Destroy (gameObject);
+	}
+}
 
 
 	public virtual void Move(){

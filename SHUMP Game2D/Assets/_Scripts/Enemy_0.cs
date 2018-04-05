@@ -19,6 +19,7 @@ public class Enemy_0 : Enemy {
 	
 	// Update is called once per frame
 	void Update () {
+		base.destroyIfOff ();
 		speed = 20 + 3 * Main.S.level;
 		MoveDown ();
 		if (Main.S.level > 3) {
